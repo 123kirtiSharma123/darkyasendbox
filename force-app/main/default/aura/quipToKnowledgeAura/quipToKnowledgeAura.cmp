@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName">
+    <aura:attribute name="recordId" type="String" />
+    <c:quipToKnowledge recordId='{!v.recordId}' onclosequickaction="{!c.handleCloseQuickAction}"></c:quipToKnowledge>
+</aura:component>

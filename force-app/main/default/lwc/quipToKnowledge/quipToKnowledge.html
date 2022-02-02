@@ -1,0 +1,41 @@
+<template >
+    <lightning-messages></lightning-messages>
+    <header class="slds-modal__header">
+        <h2 class="slds-modal__title slds-hyphenate">Update From Quip</h2>
+    </header>
+    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">          
+        <!-- <lightning-checkbox-group name="Checkbox Group"
+                                    label="URL Fields"
+                                    options={options}
+                                    value={value}
+                                    onchange={handleChange}></lightning-checkbox-group> -->
+        <!-- <p>Selected Values are: {selectedValues}</p> -->
+        
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <lightning-input label="Copy Thread Id" value={threadId} onchange={handleInputChange}></lightning-input>
+               
+                  
+                
+                <template if:true={accesstockenfound}>
+                    Access Tocken - {accessTocken}
+                </template>
+            </div>
+        </div>
+        <div id="divError">{error}</div>
+        <lightning-formatted-rich-text value={quipDocHtml}></lightning-formatted-rich-text>
+    </div>
+    <footer class="slds-modal__footer">
+        <template if:false={verificationcodefound}>
+            <lightning-button variant="brand" label="Get Verification Code" onclick={getVerification} class="slds-m-left_x-small"></lightning-button>
+        </template>
+        <template if:true={findAccessTocken}>
+            <lightning-button variant="brand" label="Get Access Tocken" onclick={getAccessKey} class="slds-m-left_x-small"></lightning-button>   
+        </template>
+        
+        <template if:false={updateArticle}>
+            <lightning-button variant="brand" label="Get Quip Document" onclick={getQuipDocument} class="slds-m-left_x-small"></lightning-button>   
+        </template>        
+        <lightning-button variant="destructive" label="Cancel" onclick={closeQuickAction} class="slds-m-left_x-small"></lightning-button>
+    </footer>
+</template>

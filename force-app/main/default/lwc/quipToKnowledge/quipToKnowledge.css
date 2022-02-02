@@ -1,0 +1,14 @@
+.quipdocclass h1
+  {
+    font-size: 140px !important;
+    color: #390ca1 !important;
+    text-align: center !important;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  .slds-rich-text-editor__textarea table, .slds-rich-text-editor__output table   {
+    border: 1px solid black !important;
+  }

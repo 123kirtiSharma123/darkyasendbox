@@ -1,0 +1,5 @@
+<apex:page standardController="Opportunity" docType="html-5.0" title="Formstack Documents Opportunity: {!opportunity.Name}">
+
+      <webm:WebmergeWizard record="{!opportunity}" />
+    
+</apex:page>
